@@ -1,0 +1,51 @@
+class RscTitles {
+    class MoneyDisplay {
+        idd = -1;
+        duration = 999999;
+        onLoad = "uiNamespace setVariable ['MoneyDisplay', _this select 0]";
+        class controls {
+            class MoneyText {
+                idc = 1100;
+                type = 0;
+                style = 0;
+                x = safeZoneX + safeZoneW * 0.85;
+                y = safeZoneY + safeZoneH * 0.10;
+                w = safeZoneW * 0.2;
+                h = safeZoneH * 0.05;
+                colorBackground[] = {0,0,0,0.5};
+                colorText[] = {1,1,1,1};
+                font = "PuristaMedium";
+                sizeEx = 0.05;
+                text = "";
+            };
+        };
+    };
+};
+
+class CfgCommunicationMenu
+{
+    class Support_Transport_Heli
+    {
+        text = "Solicitar Transporte Aéreo";
+        submenu = "";
+        expression = "[] call TRANSPORT_fnc_requestTransport";
+        icon = "\A3\ui_f\data\map\markers\military\pickup_ca.paa";
+        cursor = "";
+        enable = "1";
+        removeAfterExpr = 0;
+    };
+};
+
+// Configuración de finales de misión
+class CfgDebriefing
+{  
+    class OpforDerrota
+    {
+        title = "OPFOR Derrotado";
+        subtitle = "HQ destruido sin edificios de respaldo";
+        description = "Las fuerzas OPFOR han sido derrotadas al perder su HQ y no tener edificios de respaldo operativos.";
+        pictureBackground = "";
+        picture = "b_hq";
+        pictureColor[] = {0.9,0.0,0.0,1};
+    };
+};
